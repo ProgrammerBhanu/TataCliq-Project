@@ -105,7 +105,7 @@ let beautyData = [
     //alt img: "https://bit.ly/3i9LIvC"
     brand: "Revlon",
     name: "Revlon 24HR Kajal Intense Black - 0.35 gm",
-    price: 7,
+    price: 449,
     product_type: "eye",
   },
   {
@@ -115,7 +115,7 @@ let beautyData = [
     //alt img: ""
     brand: "Faces Canada",
     name: "Faces Canada Ultimate Pro HD Mini Whopper Lashes Mascara 5 gm",
-    price: 7,
+    price: 659,
     product_type: "eye",
   },
   {
@@ -125,7 +125,7 @@ let beautyData = [
     //alt img: ""
     brand: "Makeup Revolution",
     name: "Makeup Revolution Reloaded Combo III - 30 gm",
-    price: 7,
+    price: 1050,
     product_type: "eye",
   },
   {
