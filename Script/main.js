@@ -5,50 +5,16 @@ function myFunction(e) {
     console.log(inputKey);
 }
 
-var x = localStorage.getItem('bagItem')
+var x = localStorage.getItem('cart');
 if (x == null) {
 
 } else {
     document.querySelector('.numb').style.display = 'flex'
-    x = JSON.parse(localStorage.getItem('bagItem'))
-    document.querySelector('.numb').innerHTML = x.length
-}
-let span = document.getElementsByClassName("scroller");
-let div = document.getElementsByClassName('caraousel_images');
-let l = 0;
-
-function leftt() {
-    l++;
-    for (let i of div) {
-        if (l == 0) { i.style.left = "0px" }
-        if (l == 1) { i.style.left = "-250px" }
-        if (l == 2) { i.style.left = "-500px" }
-        if (l == 3) { i.style.left = "-750px" }
-        if (l == 4) { i.style.left = "-1250px" }
-        if (l == 5) { i.style.left = "-1500px" }
-        if (l == 6) { i.style.left = "-1750px" }
-        if (l == 7) { i.style.left = "-2000px" }
-        if (l > 7) { l = 0; }
-    }
+    x = JSON.parse(localStorage.getItem('cart'))
+    document.querySelector('.numb').innerHTML = x.length;
 }
 
-function rightt() {
-    l--;
-    for (let i of div) {
-        if (l == 0) { i.style.left = "0px" }
-        if (l == 1) { i.style.left = "-250px" }
-        if (l == 2) { i.style.left = "-500px" }
-        if (l == 3) { i.style.left = "-750px" }
-        if (l == 4) { i.style.left = "-1250px" }
-        if (l == 5) { i.style.left = "-1500px" }
-        if (l == 6) { i.style.left = "-1750px" }
-        if (l == 7) { i.style.left = "-2000px" }
-        if (l < 1) { l = 0; }
-    }
-}
-
-
-
+// Navbar start
 
 window.addEventListener('scroll', function() {
         var navbar = document.querySelector(".header");
@@ -79,6 +45,149 @@ document.querySelector('.accounts').addEventListener('mouseover', function() {
     })
     //----- appear end
 
+
+// login Window start
+const signUpButton = document.getElementById('chnge-mobile');
+const container = document.getElementById('cont');
+const signfrm = document.querySelector('#cont2');
+const btn = document.querySelector('#sign-up');
+
+const form = document.querySelector('.signup-form');
+var inp = document.createElement('input');
+var inp_lable = document.createElement('label');
+inp.type = 'email';
+inp.id = "email";
+inp_lable.textContent = "Email Id";
+var pass_name = document.createElement('label');
+pass_name.textContent = "Password";
+var pass_login = document.createElement('input');
+pass_login.type = 'password';
+pass_login.id = 'passw';
+
+var login_btn = document.createElement('button');
+login_btn.textContent = 'Login';
+login_btn.id = 'login-data';
+login_btn.setAttribute('onclick', 'login(event)')
+
+signUpButton.addEventListener('click', () => {
+    container.style.display = 'none';
+    form.removeChild(btn);
+    form.appendChild(login_btn);
+    signfrm.append(inp_lable, inp, pass_name, pass_login);
+
+});
+
+function signupdata(p) {
+    p.preventDefault();
+    // let s = document.querySelector("#cont")
+    let signupform = document.querySelector("#cont");
+    let name = signupform.name.value;
+    let mail = signupform.mail.value;
+    let pass = signupform.pass.value;
+    let a = 1;
+
+    let users = {
+        name,
+        mail,
+        pass
+    };
+
+    if (users.name.trim() == '') alert('Enter Your Name');
+    else if (users.mail.indexOf('@') == -1) alert('Enter Your Correct E-mail ID');
+    else if (users.pass == '') alert('Password should not be Empty!')
+    else {
+        let userData = localStorage.getItem("users")
+        if (userData == null) {
+            userData = [];
+            //  userData.push(users);
+        } else {
+            userData = JSON.parse(userData);
+            console.log(userData);
+        }
+        userData.forEach(function(e) {
+            if (e.name == users.name && e.mail == users.mail) {
+                alert("You are already registered, Please log in.")
+                a = 0;
+            }
+        });
+        if (a == 1) userData.push(users)
+
+        localStorage.setItem('users', JSON.stringify(userData));
+        signupform.name.value = ""
+        signupform.mail.value = ""
+        signupform.pass.value = ""
+        container.classList.remove("right-panel-active");
+    }
+}
+
+// Login authentication Start
+
+function login(e) {
+    e.preventDefault();
+    let loginForm = document.querySelector("#cont2");
+    console.log(loginForm);
+    let email = loginForm.email.value;
+    let passw = loginForm.passw.value;
+
+    let users = {
+        email,
+        passw
+    };
+
+    if (users.email.indexOf('@') == -1) alert('Enter Your Correct E-mail ID');
+    else if (users.passw == '') alert('Password should not be Empty!')
+    else {
+        let userData = localStorage.getItem('users')
+        if (userData == null) {
+            alert("You are not registered!!")
+            loginForm.email.value = ""
+            loginForm.passw.value = ""
+            container.classList.add("right-panel-active");
+        } else {
+            userData = JSON.parse(userData);
+        }
+
+        for (let i = 0; i < userData.length; i++) {
+            if (userData[i].mail == users.email && userData[i].pass == users.passw) {
+                clos();
+                alert("Login Successfully");
+                location.reload()
+
+            } else if (i == userData.length - 1) {
+                alert("Invalid Password!!")
+            }
+        }
+    }
+}
+
+// Login authentication end
+
+
+function ope() {
+
+    var cover = document.querySelector('.modelbox')
+    cover.style.display = 'block'
+}
+
+const modeltoggle = () => {
+    let model = document.querySelector('.model-box');
+    model.classList.toggle('modelhidden');
+}
+var register = document.querySelector('.register');
+register.addEventListener("click", modeltoggle);
+
+var mobile_sign = document.querySelector('.mob-sign');
+mobile_sign.addEventListener("click", modeltoggle);
+
+
+function clos() {
+    let model = document.querySelector('.model-box');
+    model.classList.toggle('modelhidden');
+}
+
+
+
+// login  window end...
 var searchExpand = document.querySelector('#search-expand')
 searchExpand.addEventListener('focus', function() {
     var search = document.querySelector('.search');
@@ -96,6 +205,7 @@ cross.addEventListener('click', function() {
     search.classList.remove('strech')
     cross.style.opacity = 0
 })
+
 
 //category dropdown
 var black = document.getElementsByClassName('sub-category-value')
@@ -126,10 +236,7 @@ function show(a) {
     section[Number(a) - 1].style.display = "none"
     black[+a].classList.add('black')
     black[Number(a) - 1].classList.remove('black')
-    black[Number(a) + 1].classList.remove('black')
-    blogo[Number(a) - 8].classList.add('showb')
-    blogo[Number(a) + 1 - 8].classList.remove('showb')
-    blogo[Number(a) - 1 - 8].classList.remove('showb')
+
 }
 
 function hide(a) {
@@ -138,7 +245,7 @@ function hide(a) {
 //brand dropdown
 function showb(a) {
     console.log(Number(a));
-    if (a == 15) {
+    if (a == 5) {
         section[Number(a)].style.display = "flex"
         section[Number(a) - 1].style.display = "none"
         arrow[Number(a) - 1].classList.remove('arrow-icon')
@@ -156,7 +263,7 @@ function showb(a) {
     black[+a].classList.add('black')
     black[Number(a) - 1].classList.remove('black')
     black[Number(a) + 1].classList.remove('black')
-    blogo[Number(a) - 8].classList.add('showb')
+    blogo[Number(a) - 3].classList.add('showb')
     blogo[Number(a) + 1 - 8].classList.remove('showb')
     blogo[Number(a) - 1 - 8].classList.remove('showb')
 }
