@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png">
+    <link rel="stylesheet" href="CSS/cart.css">
+</head>
+
+<body>
+    <h1 style="margin-left: 5%">My Bag</h1>
+    <div id="cart-items">
+        <div class="cart-items"></div>
+        <div class="cart-items"></div>
+        <div class="cart-items"></div>
+    </div>
+    <div id="total">
+        <input type="text" id="promo" />
+        <button id="apply" onclick="promo()">Apply Promo</button>
+        <div class="h4">
+            <h4 class="left">Bag total</h4>
+            <h4 id="carttotal" class="right">0</h4>
+            <h4 class="left">Shipping Charge</h4>
+            <h4 class="right" style="color: teal; font-weight: 600">Free</h4>
+            <h4 class="left">Bag Subtotal</h4>
+            <h4 id="subtotal" class="right">0</h4>
+            <h4 class="left">Product Discount</h4>
+            <h4 id="discount" class="right">-</h4>
+            <h2 class="left">Total</h2>
+            <h2 id="finaltotal" class="right">0</h2>
+        </div>
+        <div style="text-align: center">
+            <a href="checkout.html"><button id="checkout">Checkout</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let parent = document.getElementById("cart-items");
+
+    function cart() {
+        parent.innerHTML = null;
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        // console.log('cart:', cart)
+        let bagtotal = 0;
+        cart.forEach(function(el) {
+            let div = document.createElement("div");
+
+            div.setAttribute("class", "cart-items");
+
+            let img = document.createElement("img");
+            img.setAttribute("class", "cart-img");
+            let div1 = document.createElement("div");
+            div1.setAttribute("class", "name-price");
+
+            let h4name = document.createElement("h4");
+            h4name.setAttribute("class", "h4name");
+
+            let h3price = document.createElement("h3");
+            h3price.setAttribute("class", "h3price");
+
+            let imgtruck = document.createElement("img");
+
+            imgtruck.src =
+                "https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-delivery-truck-sales-vitaliy-gorbachev-blue-vitaly-gorbachev.png";
+            let p = document.createElement("p");
+
+            p.textContent = "Your Product Will be Delivered in 3 Days";
+
+            img.src = el.img;
+
+            h4name.textContent = el.name;
+
+            h3price.textContent = "Price: " + el.price;
+            div1.append(h4name, h3price, imgtruck, p);
+            div.append(img, div1);
+
+            parent.append(div);
+
+            bagtotal += +el.price;
+        });
+        let total = document.getElementById("carttotal");
+        let subtotal = document.getElementById("subtotal");
+        let finaltotal = document.getElementById("finaltotal");
+
+        total.textContent = bagtotal;
+        subtotal.textContent = bagtotal;
+        finaltotal.textContent = bagtotal;
+    }
+    cart();
+    let promocount = 0;
+
+    function promo() {
+        let promo = document.getElementById("promo").value;
+        let discount = document.getElementById("discount");
+        let bagtotal = document.getElementById("carttotal").textContent;
+        let finaltotal = document.getElementById("finaltotal");
+        if (promocount == 0) {
+            if (promo == "MASAI30") {
+                discount.textContent = "-" + (+bagtotal * 30) / 100;
+                promocount++;
+                finaltotal.textContent = +bagtotal - (+bagtotal * 30) / 100;
+                alert("Promo Applied Successfully");
+            } else {
+                alert("Invalid Promocode");
+            }
+        } else {
+            alert("Promocode Allready Applied");
+        }
+    }
+</script>

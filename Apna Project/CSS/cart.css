@@ -1,0 +1,70 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: rgb(221, 219, 219);
+}
+.cart-items {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  margin: 5%;
+  width: 800px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#total {
+  position: fixed;
+  top: 10%;
+  right: 4%;
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  padding: 2%;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+#promo,
+#apply {
+  height: 30px;
+  margin: 1%;
+  font-size: 20px;
+}
+.h4 {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-between;
+}
+.right {
+  text-align: right;
+}
+#checkout {
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: #ff1744;
+  color: white;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+#checkout:hover,
+#checkout:active,
+#checkout:focus {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+.cart-img {
+  width: 250px;
+}
+
+.name-price {
+  margin-top: 7%;
+}

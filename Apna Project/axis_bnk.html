@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <title>Online Shopping Site for Lifestyle</title>
+    <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png">
+    <link rel="stylesheet" href="CSS/axis_bnk.css">
+</head>
+
+<body>
+    <!-- --------- Nav Bar starts ------------------->
+    <nav class="header">
+        <div class="logo">
+            <img src="images/screencapture-tatacliq-2021-05-28-21_43_50.png" alt="">
+        </div>
+        <!-- responsive nav -->
+        <div class="mob-nav">
+            <div onclick="location.href='#'">Women's Fashion</div>
+            <div onclick="location.href='#'">Mans Fashion</div>
+            <div onclick="location.href='#'">Kid's Fashion</div>
+            <div onclick="location.href='#'">Electronics</div>
+            <div class="mob-sign" onclick="ope()">Sign In / SignUp</div>
+        </div>
+        <!-- responsive nav -->
+        <div class="nav-right">
+            <div class="up-nav">
+                <div class="tata-luxury-page">
+                    <a href="#">Tata CLiQ Luxury</a>
+                </div>
+                <!--login and track tabs-->
+                <div class="login-and-tracktab">
+                    <div class="tata-luxury-page">
+                        <a href="#">CLiQ Cash</a>
+                    </div>
+                    <div class="tata-luxury-page" onclick="ope()">
+                        <a href="#">Gift Card</a>
+                    </div>
+                    <div class="tata-luxury-page" onclick="ope()">
+                        <a href="#">CLiQ Care</a>
+                    </div>
+                    <div class="tata-luxury-page" onclick="ope()">
+                        <a href="#">Track Orders</a>
+                    </div>
+                    <div class="tata-luxury-page sig" onclick="ope()" style="height: 40px;cursor: pointer;">
+
+                        <a href="#" id="sign">Sign in / Sign Up</a>
+                    </div>
+                    <div class="accounts">
+
+                    </div>
+                </div>
+            </div>
+            <div class="down-nav">
+                <div class="dropdowns">
+                    <div class="category" onmouseover="show()" onmouseout="hide()">Categories
+                        <div class="img"></div>
+                        <div class="category-expand">
+                            <div class="sub-category">
+                                <div class="sub-category-value black" onmouseover="show(0)" onmouseout="hide(0)">Women's Fashion
+                                    <div class="arrow arrow-icon"></div>
+                                </div>
+                                <div class="sub-category-value" onmouseover="show(1)" onmouseout="hide(1)">Men's Fashion
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="sub-category-value" onmouseover="show(2)" onmouseout="hide(2)">TV & Appliances
+                                    <div class="arrow "></div>
+                                </div>
+                                <div class="sub-category-value" onmouseover="show(3)" onmouseout="hide(3)">Mobile phones
+                                    <div class="arrow "></div>
+                                </div>
+                            </div>
+                            <!--  sub category sub values   -->
+                            <div class="sub-category-option ">
+                                <section class="show">
+                                    <div class="sub-category-option-header">Ethnic Wear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Kurtas & Kurtis</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Suits Sets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sarees</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Lehenga Sets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Bottom</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Dupattas</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Blouse & Dress</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Inner & Nightwear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Camisole</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sleeping & Robes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Shapewear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Custom clothes</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Fragrances</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Active & Sportswear</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Western Wear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Top & Tees</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Dress</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Shirts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Pant & Trousers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Jeans</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Leggings</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Jumpsuits</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Skirts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Jacket & Blazers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">shrugs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sweatshirts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sweaters</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Curvy Fasshion</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">View All Clothing</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Footwear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Casual</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Ethnic</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sneakers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Boots</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sports Shoes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Flip Flops</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Dressy Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">casual Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Smart Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sports Watches</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Handbags & Wallets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Handbags</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Tote Bags</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sling Bags</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Laptop Bags</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Backpacks</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Wallet</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Clutches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Leather Bags</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Jewellery</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Gold Jewellery</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Daimond Jewellery</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Silver Jewellery</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Fashion Jewellery</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Eyewear</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Frames</div>
+                                    <!-- <div class="sub-category-option-value"  onclick="location.href='#'">wd</div> -->
+                                </section>
+                                <section>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Footwear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Casual Shoes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sneakers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal Shoes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Training Shoes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Running Shoes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sports Shoes</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Flip Flops</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Boots</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Sports Wear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">T-shirts & Jersys</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Shorts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sports jackets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Gym Gear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Joggers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Ethnic Wear</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Clothing</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">T-shirts & Polos</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Casual Shirts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Jeans</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Trousers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Shorts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Casual Jackets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Winter Wear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal Shirts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal Trouser</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Innerwear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sleepwear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal Blazer</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">View All Clothing</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Workwear Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">casual Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Smart Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Formal Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sports Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Digital Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Partywear Watches</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">The Watch Store</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Bags & Backpacks</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Backpacks</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Wallets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Metalic Wallets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Messenger Bags</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Cross Body bags</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Luggage & Trolleys</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Trolly & Suitcase</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Duffle Bags</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Rucksack & Trekking</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Backpacks</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Fashion Accessories</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Belts</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Hats & Caps</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Ties & Cuffinks</div>
+                                    <!-- <div class="sub-category-option-value"  onclick="location.href='#'">Men's Gift Sets</div> -->
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Jewellery</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Men's Jewellery</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Coins And Bars</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Eyewear</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sunglasses</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Aviators</div>
+                                </section>
+                                <section>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Summer Appliances Deals</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">AC Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Air Conditioners</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Split ACs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Inverter ACs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Adjustable ACs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Window ACs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Stabilizers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Televisions</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Smart TVs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">4K Ultra HD TVs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Android TVs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">OLED &amp; QLED TVs</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Bestselling TVs</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Audio Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Soundbars</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Home Theatres</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Party Speakers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Refrigerator Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Refrigerators</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Single Door</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Double Door</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Side-by-Side</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Convertible</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Bottom Mount</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Washing Machines</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Automatic Front Load</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Automatic Top Load</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Semi Automatic</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Washers &amp; Dryers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Dishwashers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Kitchen Appliances Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Kitchen Appliances</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Microwave Ovens</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Mixers &amp; Grinders</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Blenders &amp; Juicers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Cooktops</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Air Fryers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Kettles &amp; Coffee Makers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Toasters</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Electric Cookers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Food &amp; Roti Makers</div>
+
+                                </section>
+                                <section>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Electronics Deals</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Mobile Phones Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Mobile Phones</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">iPhone</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">New Launches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Flagship Phones</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Feature Phones</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Shop by Brand</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Apple</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Samsung</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Vivo</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Oppo</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Realme</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Nokia</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Xiaomi</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">OnePlus</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Shop by Feature</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">5G Phones</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Gaming Phones</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Selfie Phones</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Long Battery Life</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Shop by Price</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Under Rs. 10,000</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">From 10,001 to 20,000</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">From 20,001 to 30,000</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">From 30,001 to 50,000</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Above 50,000</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Accessories Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Cases &amp; Covers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Screen Protectors</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Chargers</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Cables</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Power Banks</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Memory Cards</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Mobile Holders</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Apple Accessories</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Audio Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Earphones</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Headsets</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">True Wireless</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Neckbands</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Bluetooth Speakers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Wearables Store</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Smart Watches</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Apple Watch</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Fitness Trackers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Value-Added Services</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Extended Warranty</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Exchange Offers</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">View Other Categories</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Appliances</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Televisions</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Laptops</div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brands" onmouseover="showb()" onmouseout="hideb()">Brands
+                        <div class="imgg"></div>
+                        <div class="category-expand b">
+                            <div class="sub-category bs">
+                                <div class="sub-category-value" onmouseover="showb(8)" onmouseout="hideb(8)">TV & Appliances
+                                    <div class="arrow arrow-icon"></div>
+                                </div>
+                                <div class="sub-category-value" onmouseover="showb(9)" onmouseout="hideb(9)">Electronics
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                            <!--  sub category sub values   -->
+                            <div class="sub-category-option ">
+                                <section class="show">
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Popular Brands</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Lg</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Samsung</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sony</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Hitachi</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Daikin</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Carrier</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Blue Star</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Bosch</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Xiaomi</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Panasonic</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Bajaj</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Kent</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Havells</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Usha</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Featured brand</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">VU</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Lloyd</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">TCL</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sanyo</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Godrej</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Prestige</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Wonderchef</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Tata Swach</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Livpure</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Luminous</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">KitchenAid</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Syska</div>
+                                </section>
+                                <section>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Popular brands</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Apple</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Oppo</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Xiaomi</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">HP</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Dell</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Asus</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Canon</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Nikon</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">GoPro</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Fitbit</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Google</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Seagate</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">WD</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">SanDisk</div>
+                                    <div class="sub-category-option-header" onclick="location.href='#'">Featured brands</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Nokia</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Motorola</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Boult Audio</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Acer</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Microsoft</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Noise</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Ambrane</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Zebronics</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Epson</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Kingston</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Blaupunkt</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Sennheiser</div>
+                                    <div class="sub-category-option-value" onclick="location.href='#'">Garmin</div>
+                                </section>
+                            </div>
+                            <div class="brand-logos">
+                                <Blogo class="showb">
+                                    <div class="elec-logo">
+                                        <img src="images/home page/tv& (1).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/tv& (2).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/tv& (4).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/tv& (4).jpg" alt="">
+                                    </div>
+                                </Blogo>
+                                <Blogo>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/elec (2).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/elec (6).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/elec (1).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/elec (3).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/elec (4).jpg" alt="">
+                                    </div>
+                                    <div class="elec-logo">
+                                        <img src="images/home page/elec (5).jpg" alt="">
+                                    </div>
+                                </Blogo>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cross"></div>
+                <div class="search-cart-page">
+                    <div class="cart-whistlist">
+                        <div class="whist-list">
+                            <img src="images/home page/whistlistt.svg" alt="">
+                        </div>
+                        <div class="cart">
+                            <a href="cart/cart.html">
+                                <span class="numb">0</span>
+                                <img src="images/home page/cart icon.svg" alt="" style="width: 20px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <input type="text" id="search-expand" onkeydown="myFunction(event)" autocomplete="off" placeholder="Search">
+                        <div class="search-icon">
+                            <img src="images/home page/searchwhite.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ham">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="keep">
+        <div class="speech-bubble">
+            <div class="register" onclick="ope()">Login/ Register</div>
+        </div>
+    </div>
+    <!-- --------- Nav Bar Ends ------------------->
+
+    <!--  Carousel Starts   -->
+    <br>
+    <br>
+    <div class="axisBankDetail">
+        <p class="AllFont" id="hedding">AXIS Net-banking Offer</p>
+        <p class="AllFont"><u>Offer days:&nbsp </u>Valid every Friday, Saturday and Sunday</p>
+        <p class="AllFont"><u>Offer Period:&nbsp </u>1st April 2021 to 31st March 2022</p>
+        <p class="AllFont"><u>Offer: </u></p>
+        <p class="AllFont" id="hedding">MarketPlace</p>
+        <p class="AllFont">10% Instant Discount |Min purchase: Rs. 1000| Max Discount: 200 | Coupon Code: AXISINB</p>
+        <p class="AllFont" id="hedding">Terms & Conditions for availing the Offer:</p>
+        <ul>
+            <li class="AllFont">Additional instant discount on using ICICI Net-banking payment mode (for net transaction value of over Rs 1000) on select purchases made on Tata CLiQ E-commerce site (tatacliq.com), Mobile site and mobile application during the promotion period
+                for a Net Transaction Value*.</li>
+            <br>
+            <li class="AllFont">The Net Cart Value is the total cart value arrived at after all applicable discounts but before availing discounts under this Offer. In case CLiQ Cash is being used to make a partial payment, Net Cart Value will be calculated after reducing
+                the amount being paid by using CLiQ Cash. To avail of the offer the amount being paid through ICICI Net-banking has to be more than the min purchase price of the respective offer. The customer is advised to check the applicability of the
+                discount before proceeding for Payment. The customer needs to apply the above coupon code prior to checkout to avail of the offer.</li><br>
+            <li class="AllFont">Offer is valid only once per calendar month per customer.</li><br>
+
+            <li class="AllFont">Offer is applicable only on ICICI Net-banking transaction.</li><br>
+
+            <li class="AllFont">To avail the additional instant discount the total payment of the transaction needs to be made using ICICI Net-banking.</li><br>
+            <li class="AllFont">Offer is available on select products. Offer is not valid on Tata CLiQ Gift Cards, Brand Gift Cards, Gold Coins, Insurance Products, Seller Trent Limited, Page Industries Limited, Landmark and Tata CLiQ Luxury.</li><br>
+
+            <li class="AllFont">This offer is valid for purchases made on the Eligible products during the “Offer Period”. Customers are required to check the product page of the product(s) if the offer is valid for that product.</li><br>
+
+            <li class="AllFont">Offer not valid on debit card, credit card, cash/card on delivery, commercial and corporate cards</li><br>
+
+            <li class="AllFont">Tata UniStore Limited reserves the right, at any time, without prior notice and without assigning any reason whatsoever to add/modify/alter/change and/or withdraw this offer at any time at its sole discretion.</li><br>
+
+            <li class="AllFont">Tata Unistore Limited reserves the right to cancel an order in case of any fraudulent activity including creating duplicate accounts, aliasing, placing multiple orders or violating the terms and conditions. Upon cancellation, the order will
+                not be reinstated.</li><br>
+
+            <li class="AllFont">Offer is valid once per customer. Duplicate transactions using same Net banking id are liable to be cancelled.</li><br>
+            <li class="AllFont">Offer cannot be combined with any other offer/promotion running on the site</li><br>
+
+        </ul>
+
+
+
+    </div>
+    <br>
+    <br>
+    <!--  Carousel Ends   -->
+    <!-- Footer starts  -->
+    <div class="footer">
+        <div class="containers">
+            <div class="trust-section">
+                <div class="trust-component">
+                    <div class="trust-logo">
+                        <div class="icon-image" style="background-image: url(icons/tata_trust_1.png);"></div>
+                    </div>
+                    <div class="trust-text">Tata Trust</div>
+                </div>
+                <div class="trust-component">
+                    <div class="trust-logo">
+                        <div class="icon-image" style="background-image: url(icons/cliq_and_piq_icon.png);"></div>
+                    </div>
+                    <div class="trust-text">QUiQ PiQ</div>
+                </div>
+                <div class="trust-component">
+                    <div class="trust-logo">
+                        <div class="icon-image" style="background-image: url(icons/brands_icon.png);"></div>
+                    </div>
+                    <div class="trust-text">Authentic Brands</div>
+                </div>
+                <div class="trust-component">
+                    <div class="trust-logo">
+                        <div class="icon-image" style="background-image: url(icons/return_icon.png);"></div>
+                    </div>
+                    <div class="trust-text">Easy Returns</div>
+                </div>
+            </div>
+        </div>
+        <div class="linkSub-holder">
+            <div class="link-holder">
+                <div class="linkSection">
+                    <div class="linkHeader">Tata MarketPlace</div>
+                    <div class="link">About Us</div>
+                    <div class="link">Careers</div>
+                    <div class="link">Sell With Us</div>
+                    <div class="link">Terms Of Use</div>
+                    <div class="link">Privacy Policy</div>
+                    <div class="link">Affiliates</div>
+                    <div class="link">Sitemap</div>
+                </div>
+                <div class="linkSection">
+                    <div class="linkHeader">Customer Services</div>
+                    <div class="link">Shopping</div>
+                    <div class="link">Frequently Asked Questions</div>
+                    <div class="link">Offers & Promotions</div>
+                    <div class="link">Payments</div>
+                    <div class="link">Cancellation</div>
+                    <div class="link">Returns & Refunds</div>
+                    <div class="link">CliQ And PiQ</div>
+                    <div class="link">Return To Store</div>
+                    <div class="link">Electronics Return Policy</div>
+                    <div class="link">Contact Us</div>
+                    <div class="link">Reviews Guidelines</div>
+                </div>
+                <div class="linkSection">
+                    <div class="linkHeader">My Tata CLiQ</div>
+                    <div class="link">My Account</div>
+                    <div class="link">My Order</div>
+                    <div class="link">My Shopping Bag</div>
+                    <div class="link">My Wishlist</div>
+                </div>
+            </div>
+            <div class="news"></div>
+        </div>
+        <div class="containers">
+            <div class="social-holder">
+                <div class="downloadApp">
+                    <div class="download-text">Download App</div>
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/android.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/apple.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="social-icon-holder">
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/facebook.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/twitter.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/insta.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/youtube.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="appIconHolder">
+                            <div class="icon-image" style="background-image:url(icons/linkedin.png);background-size: contain;"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="copy-right-text">
+                    © 2021 Tata CLiQ | All rights reserved
+                </div>
+            </div>
+        </div>
+        <div class="last-text">
+            <h2>TATA CLiQ: Shop Online with India's most trusted destination. Buy Brands you love at prices you want!</h2>
+            <p>Shop online whenever you want to - yes, that 24x7 experience is so convenient now, isn't it?! Get genuine products from all the Top Brands delivered to your doorstep, with free shipping. Our clean, immersive design allows for easy navigation
+                across categories and brand stores so you can find the best products from a wide range of
+                <a href="#">smartphones</a>,<a href="#">mobile phones</a>,<a href="#">laptop</a>,<a href="#">women's clothing</a>,<a href="#">men's clothing</a>,<a href="#">kids wear</a>,<a href="#">watches</a> and <a href="#">accessories</a> online.
+                You can also check our great offers or deal of the day section and get the best prices on various products across lifestyle, fashion, electronics, appliances & more. With such offerings and TATA CLiQ exclusive bank offers and TATA CLiQ
+                coupons, do remeber to buy mobile online, do online electronics shopping and online dress shopping of top Brands at the best prices available throughout the year.
+            </p>
+            <h2>Online Shopping: Fast & convenient with the click of a button</h2>
+            <p>The upside of online shopping at TATA CLiQ online store, is that you'll save on time and most importantly money with TataCliq offers. It's as simple as comparing products and prices online before making the right buy. What's more, you also
+                have the option to pay for your favourite brands and products using our easy EMI options. Of course, you can buy and try - in the convenience of your home. Returns are easy too: We'll pick up your returns for free or you can also drop
+                off the goods at the nearest brand store.</p>
+            <h2>Tata CLiQ Shopping App: Everything you want with just a few clicks on Android & iOS</h2>
+            <p>Shopping on the Tata CLiQ App is an absolute delight. Download the <a href="#">Tata CLiQ Android app</a> from the Play Store or the <a href="#">iOS App</a> from Apple App Store and get set to enjoy a range of benefits. Apart from the best
+                deals, amazing offers and the latest styles online, the app also gives you the flexibility to shop at your convenience. Shop during a commute, in the middle of a holiday or at any time you want to. You can also use the easy share options
+                to share your shopping with your friends and family to ensure you're buying something that's perfect. With constant updates and a host of new features being introduced constantly, you also get to enjoy a shopping experience that you'll
+                absolutely love. Download the Tata CLiQ App today and prepare to rediscover the way you shop.</p>
+            <h2>TATA CLiQ: Most genuine place for Electronics and Lifestyle Online Shopping, with India's most trusted destination. Buy Brands you love at prices you want!</h2>
+            <p>Shopping for your Lifestyle needs will be made delightfult with TATA CLiQ. With exclusive Brand store for <a href="#">Westside Online</a> we have most of your trndy shopping needs taken care of. Make TATA CliQ your online clothes shopping
+                destination and get the best deals on your favorite brands, with the 100% genuine products. Be it gold coins or mobile phones online, you can count on TATA CliQ for receiving only the most authentic products. Upgrade your lifestyle with
+                shoes online shopping and online clothes shopping only at TATA CLiQ. Online Shopping for men has never been more easy! Men like to choose Brands and keep their wardrobe upto date with the latest trends. TATA CLiQ has made the Online shopping
+                expirience amazing for Men. Women's Lifetyle Online shopping needs have been taken care of as well, with the larget assortment of womenwear online</p>
+        </div>
+    </div>
+
+    <!-- Footer ends  -->
+
+    <!-- Custom Javascript file -->
+
+</body>
+<script src="Script/axis_bnk.js"></script>
+
+</html>
