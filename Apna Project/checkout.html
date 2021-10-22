@@ -8,100 +8,172 @@
     <link rel="icon" href="https://www.tatacliq.com/favicon.ico" type="png">
     <title>Checkout</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "Roboto", sans-serif;
-        }
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 13px;
+    }
+
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
-        body {
-            background-color: rgb(221, 219, 219);
-            text-align: center;
-        }
-        
-        #form {
-            margin-top: 5%;
-            text-align: center;
-            justify-content: center;
-        }
-        
-        .address {
-            width: 500px;
-            height: 50px;
-            font-size: 15px;
-        }
-        
-        .card-number {
-            height: 30px;
-            font-size: 15px;
-        }
-        
-        .pincode {
-            width: 80px;
-            font-size: 15px;
-        }
-        
-        .expiry {
-            width: 150px;
-            font-size: 15px;
-        }
-        
-        .cvv {
-            width: 50px;
-            font-size: 15px;
-        }
-        
-        input {
-            margin: 5px;
-        }
-        
-        .submit {
-            width: 100px;
-            height: 30px;
-            border-radius: 5px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-        
-        .thank {
-            color: teal;
-        }
-        
-        .msg {
-            color: rgb(0, 128, 90);
-        }
-        
-        #all {
-            margin-top: 5%;
-        }
+    }
+
+    .container{
+        width: 750px;
+        height: 500px;
+        border: 1px solid;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        justify-content:space-around;
+        box-shadow:  inset 0 -3em 3em rgba(0,0,0,0.1),
+                0.3em 0.3em 1em rgba(0,0,0,0.25);
+    }
+
+    .container h1{
+        text-align: center;
+        color: #00a699;
+        background-color: #ECEFF1;
+    }
+
+    .first-row{
+        display: flex;
+    }
+
+    .owner{
+        width: 100%;
+        margin-right: 40px;
+    }
+
+    .input-field{
+        border: 1px solid #999;
+    }
+
+    .input-field input{
+        width: 100%;
+        border:none;
+        outline: none;
+        padding: 10px;
+    }
+
+    .selection{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .selection select{
+        padding: 10px 20px;
+    }
+
+    button{
+        background-color: #00a699;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+        transition: 0.5s;
+        width: 50%;
+        margin-left: 150px;
+    }
+
+    button:hover{
+        background-color: dodgerblue;
+    }
+
+    .cards img{
+        width: 100px;
+        margin: 1px;
+        padding: 2px;
+        height: 50px;
+    }
     </style>
 </head>
 
 <body>
     <div id="all">
-        <h1>Checkout</h1>
-        <form id="form" action="" onsubmit="payment(event)">
-            <input class="address" type="address" placeholder="Enter Your Address" required />
-            <br />
-            <input class="pincode" type="pincode" placeholder="Pincode" required />
-            <br />
-            <input class="card-number" type="number" minlength="16" maxlength="17" inputmode="numeric" placeholder="Enter Card Number" required />
-
-            <input class="expiry" type="month" placeholder="Expiry Date" required />
-            <br />
-            <input class="cvv" type="number" maxlength="3" placeholder="Cvv" required />
-            <br />
-            <input class="submit" type="submit" />
-        </form>
+        <div class="container">
+            <h1>Checkout</h1>
+            <div class="first-row">
+                <div class="owner">
+                    <h3>Card Holder's Name</h3>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Your Name Here">
+                    </div>
+                </div>
+                <div class="cvv">
+                    <h3>CVV</h3>
+                    <div class="input-field">
+                        <input type="password" placeholder="Enter  Number">
+                    </div>
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="card-number">
+                    <h3>Card Number</h3>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Your Card Number Here">
+                    </div>
+                </div>
+            </div>
+            <div class="third-row">
+                <h3>Valid Upto</h3>
+                <div class="selection">
+                    <div class="date">
+                        <select name="months" id="months">
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun">Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sep">Sep</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                          </select>
+                          <select name="years" id="years">
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                          </select>
+                    </div>
+                    <div class="cards">
+                        <img src="https://utils.imimg.com/payments/pwim_files/pwim_modes_v5.png" style="width: 80%;height: auto;max-width: 100%;margin-bottom: 20px;">
+                    </div>
+                </div>    
+            </div>
+            <button onclick="payment()">Pay Now</button>
+        </div>
     </div>
 </body>
 
 </html>
 
 <script>
-    function payment(e) {
+    function payment() {
         let parent = document.getElementById("all");
-        e.preventDefault();
+       
         parent.innerHTML = null;
 
         setTimeout(function(el) {
