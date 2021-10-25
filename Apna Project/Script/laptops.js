@@ -298,42 +298,54 @@ function lap(a) {
   parent.innerHTML = null;
   a.forEach(function (p) {
     if (p.category == "laptop") {
-      let div = document.createElement("div");
+        let main_div = document.createElement("div");
 
-      div.setAttribute("class", "rkbox");
-
-      let img = document.createElement("img");
-      img.setAttribute("class", "rkimg");
-
-      let brand = document.createElement("h4");
-      brand.setAttribute("class", "rkh4");
-
-      let name = document.createElement("p");
-      name.setAttribute("class", "rkp");
-
-      let price = document.createElement("h4");
-      price.setAttribute("class", "rkh4");
-
-      img.src = p.img;
-
-      brand.textContent = p.brand;
-
-      name.textContent = p.name;
-
-      price.textContent = "Price: " + p.price;
-
-      let addcart_btn = document.createElement("button");
-      addcart_btn.setAttribute("class", "cartbtn");
-      addcart_btn.innerHTML = "Add To Cart";
-
-      addcart_btn.onclick = function () {
-        addtocart(p);
-      };
-
-      div.append(img, brand, name, price, addcart_btn);
-
-      parent.append(div);
-
+        let div = document.createElement("div");
+  
+        div.setAttribute("class", "rkbox");
+  
+        let img = document.createElement("img");
+        img.setAttribute("class", "rkimg");
+  
+        let brand = document.createElement("h4");
+        brand.setAttribute("class", "rkh4");
+  
+        let name = document.createElement("p");
+        name.setAttribute("class", "rkp");
+  
+        let price = document.createElement("h4");
+        price.setAttribute("class", "rkh4");
+  
+        img.src = p.img;
+  
+        brand.textContent = p.brand;
+  
+        name.textContent = p.name;
+  
+        price.textContent = "Price: " + p.price;
+  
+        let btn_div = document.createElement("div");
+        btn_div.setAttribute("class", "btn-div");
+  
+        let addcart_btn = document.createElement("button");
+        addcart_btn.setAttribute("class", "cartbtn");
+        addcart_btn.innerHTML = "Add To Cart";
+        addcart_btn.onclick = function () {
+          addtocart(p);
+        };
+  
+        let buynow_btn = document.createElement("button");
+        buynow_btn.innerHTML = "Buy Now";
+        buynow_btn.setAttribute("class", "buybtn");
+        buynow_btn.onclick = function () {
+            window.location.href = "./cart.html";
+          };
+  
+        btn_div.append(addcart_btn, buynow_btn);
+        div.append(img, brand, name, price, btn_div);
+        main_div.append(div,btn_div)
+  
+        parent.append(main_div);
     }
   });
   let products_cart = JSON.parse(localStorage.getItem("cart"));
