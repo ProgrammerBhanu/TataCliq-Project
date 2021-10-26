@@ -162,8 +162,10 @@ function login(e) {
 // Login authentication end
 
 function ope() {
-  var cover = document.querySelector(".modelbox");
-  cover.style.display = "block";
+  try {
+    var cover = document.querySelector(".modelbox");
+    cover.style.display = "block";
+  } catch (e) {}
 }
 
 const modeltoggle = () => {
