@@ -207,23 +207,25 @@ var categoryExpand = document.querySelector(".category-expand");
 var categoryExpandb = document.querySelector(".b");
 
 function show(a) {
-  if (a == 0) {
-    section[Number(a) + 1].style.display = "none";
-    section[Number(a)].style.display = "flex";
+  try {
+    if (a == 0) {
+      section[Number(a) + 1].style.display = "none";
+      section[Number(a)].style.display = "flex";
+      arrow[Number(a) + 1].classList.remove("arrow-icon");
+      black[Number(a)].classList.remove("black");
+      black[Number(a)].classList.add("black");
+      black[Number(a) + 1].classList.remove("black");
+    }
+    categoryExpand.style.display = "flex";
+    arrow[+a].classList.add("arrow-icon");
     arrow[Number(a) + 1].classList.remove("arrow-icon");
-    black[Number(a)].classList.remove("black");
-    black[Number(a)].classList.add("black");
-    black[Number(a) + 1].classList.remove("black");
-  }
-  categoryExpand.style.display = "flex";
-  arrow[+a].classList.add("arrow-icon");
-  arrow[Number(a) + 1].classList.remove("arrow-icon");
-  arrow[Number(a) - 1].classList.remove("arrow-icon");
-  section[+a].style.display = "flex";
-  section[Number(a) + 1].style.display = "none";
-  section[Number(a) - 1].style.display = "none";
-  black[+a].classList.add("black");
-  black[Number(a) - 1].classList.remove("black");
+    arrow[Number(a) - 1].classList.remove("arrow-icon");
+    section[+a].style.display = "flex";
+    section[Number(a) + 1].style.display = "none";
+    section[Number(a) - 1].style.display = "none";
+    black[+a].classList.add("black");
+    black[Number(a) - 1].classList.remove("black");
+  } catch (e) {}
 }
 
 function hide(a) {
@@ -231,28 +233,29 @@ function hide(a) {
 }
 //brand dropdown
 function showb(a) {
-  console.log(Number(a));
-  if (a == 5) {
-    section[Number(a)].style.display = "flex";
-    section[Number(a) - 1].style.display = "none";
+  try {
+    if (a == 5) {
+      section[Number(a)].style.display = "flex";
+      section[Number(a) - 1].style.display = "none";
+      arrow[Number(a) - 1].classList.remove("arrow-icon");
+      black[Number(a)].classList.remove("black");
+      black[Number(a)].classList.add("black");
+      black[Number(a) - 1].classList.remove("black");
+    }
+    categoryExpandb.style.display = "flex";
+    arrow[+a].classList.add("arrow-icon");
+    arrow[Number(a) + 1].classList.remove("arrow-icon");
     arrow[Number(a) - 1].classList.remove("arrow-icon");
-    black[Number(a)].classList.remove("black");
-    black[Number(a)].classList.add("black");
+    section[+a].style.display = "flex";
+    section[Number(a) + 1].style.display = "none";
+    section[Number(a) - 1].style.display = "none";
+    black[+a].classList.add("black");
     black[Number(a) - 1].classList.remove("black");
-  }
-  categoryExpandb.style.display = "flex";
-  arrow[+a].classList.add("arrow-icon");
-  arrow[Number(a) + 1].classList.remove("arrow-icon");
-  arrow[Number(a) - 1].classList.remove("arrow-icon");
-  section[+a].style.display = "flex";
-  section[Number(a) + 1].style.display = "none";
-  section[Number(a) - 1].style.display = "none";
-  black[+a].classList.add("black");
-  black[Number(a) - 1].classList.remove("black");
-  black[Number(a) + 1].classList.remove("black");
-  blogo[Number(a) - 3].classList.add("showb");
-  blogo[Number(a) + 1 - 8].classList.remove("showb");
-  blogo[Number(a) - 1 - 8].classList.remove("showb");
+    black[Number(a) + 1].classList.remove("black");
+    blogo[Number(a) - 3].classList.add("showb");
+    blogo[Number(a) + 1 - 8].classList.remove("showb");
+    blogo[Number(a) - 1 - 8].classList.remove("showb");
+  } catch (e) {}
 }
 
 function hideb(a) {
@@ -320,7 +323,7 @@ function home(a) {
       buynow_btn.innerHTML = "Buy Now";
       buynow_btn.setAttribute("class", "buybtn");
       buynow_btn.onclick = function () {
-        addtocart(p)
+        addtocart(p);
         window.location.href = "./cart.html";
       };
 
