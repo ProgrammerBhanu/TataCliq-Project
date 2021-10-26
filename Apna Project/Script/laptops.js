@@ -338,6 +338,7 @@ function lap(a) {
         buynow_btn.innerHTML = "Buy Now";
         buynow_btn.setAttribute("class", "buybtn");
         buynow_btn.onclick = function () {
+            addtocart(p)
             window.location.href = "./cart.html";
           };
   
