@@ -712,6 +712,7 @@ a:active {
 .signup-form h3 {
     color: #da1c5c;
     cursor: pointer;
+    margin-top: 8%;
 }
 
 .right-panel-active {
@@ -728,6 +729,18 @@ a:active {
 
 .cont-login {
     display: none;
+}
+
+.span-lg {
+    color: #000;
+    cursor: default;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.span-lg2 {
+    text-decoration: dashed underline;
+    text-underline-position: under;
 }
 
 @media only screen and (max-width: 990px) {
