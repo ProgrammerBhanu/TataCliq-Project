@@ -1403,25 +1403,28 @@ if (localStorage.getItem("cliqprod") == null) {
   localStorage.setItem("cliqprod", JSON.stringify([]));
 }
 
-// function prod(data) {
-//   let cliq = JSON.parse(localStorage.getItem("cliqprod"));
-//   data.forEach(function (el) {
-//     let prod = {
-//       department: el.department,
-//       category: el.category,
-//       img: el.img,
-//       brand: el.brand,
-//       name: el.name,
-//       price: el.price,
-//       product_type: el.product_type,
-//     };
+function prod(data) {
+  let cliq = JSON.parse(localStorage.getItem("cliqprod"));
+  data.forEach(function (el) {
+    let prod = {
+      department: el.department,
+      category: el.category,
+      img: el.img,
+      brand: el.brand,
+      name: el.name,
+      price: el.price,
+      product_type: el.product_type,
+    };
 
-//     cliq.push(prod);
-//   });
-//   localStorage.setItem("cliqprod", JSON.stringify(cliq));
-// }
+    cliq.push(prod);
+  });
+  localStorage.setItem("cliqprod", JSON.stringify(cliq));
 
-// prod(data);
+  let div = document.getElementById("data");
+  div.textContent="Data has been Added to your Localstorage.Please close this Tab Now & Open MAIN.HTML file Otherwise Data Will be duplicate."
+}
+
+prod(data);
 
 
 
