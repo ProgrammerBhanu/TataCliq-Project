@@ -1,5 +1,6 @@
 # [TataCliQ | Original](https://www.tatacliq.com/)
-
+### How to run Tatacliq website clone
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=z-nGFCljsp0)
 <table>
 <tr>
 <td>
