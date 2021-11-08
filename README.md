@@ -40,11 +40,7 @@ Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by
 ### Execution..
 Want to run in your local Machine? Great!
 
-To run, follow these steps:
 
-- Clone my repository `https://github.com/ProgrammerBhanu/TataCliq-Project`
-- Install packages `npm install`
-- Run the app `npm start / yarn start'
 
 
 ## Built with 
