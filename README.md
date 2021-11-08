@@ -1,6 +1,10 @@
 # [TataCliQ | Original](https://www.tatacliq.com/)
 ### How to run Tatacliq website clone
 [Watch the video](https://www.youtube.com/watch?v=z-nGFCljsp0)
+## Steps 
+- Open data.html file in your browser only once.
+- Goto data.html file code and comment down <Script> tag. (otherwise it will duplicate that products in your local Storage)
+- Now open main.html page in browser and you are good to go.
 <table>
 <tr>
 <td>
