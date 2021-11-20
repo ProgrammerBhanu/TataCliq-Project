@@ -1421,7 +1421,7 @@ function prod(data) {
   localStorage.setItem("cliqprod", JSON.stringify(cliq));
 
   let div = document.getElementById("data");
-  div.textContent="Data has been Added to your Localstorage.Please close this Tab Now & Open MAIN.HTML file Otherwise Data Will be duplicate."
+  window.location.href = 'main.html';
 }
 
 prod(data);
