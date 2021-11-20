@@ -1,6 +1,6 @@
 # [TataCliQ | Original](https://www.tatacliq.com/)
 ### To run Tatacliq website clone click below link:
-- [@Click Here] (https://programmerbhanu.github.io/TataCliq-Project/)
+- [@Click Here](https://programmerbhanu.github.io/TataCliq-Project/)
 <table>
 <tr>
 <td>
