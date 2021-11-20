@@ -1,10 +1,6 @@
 # [TataCliQ | Original](https://www.tatacliq.com/)
-### How to run Tatacliq website clone
-[Watch the video](https://www.youtube.com/watch?v=z-nGFCljsp0)
-## Steps 
-- Open data.html file in your browser only once.
-- Goto data.html file code and comment down <Script> tag. (otherwise it will duplicate that products in your local Storage)
-- Now open main.html page in browser and you are good to go.
+### To run Tatacliq website clone click below link:
+- (https://programmerbhanu.github.io/TataCliq-Project/main.html)
 <table>
 <tr>
 <td>
@@ -20,22 +16,22 @@ Tata Cliq is an Indian e-commerce company based in Mumbai, India. It is owned by
 
 ### Home Page
 
-![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/Apna%20Project/images/home-page.png)
+![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/images/home-page.png)
 
 ### Product Page
-![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/Apna%20Project/images/product.png)
+![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/images/product.png)
 
 ### Cart Page
-![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/Apna%20Project/images/cart.png)
+![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/images/cart.png)
 
 ### Checkout Page
-![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/Apna%20Project/images/checkout.png)
+![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/images/checkout.png)
 
 ### Login Popup Window
-![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/Apna%20Project/images/loginpage.png)
+![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/images/loginpage.png)
 
 ### Mobile Navbar
-![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/Apna%20Project/images/Mobile_nav.png)
+![](https://github.com/ProgrammerBhanu/TataCliq-Project/blob/main/images/Mobile_nav.png)
 
 
 
